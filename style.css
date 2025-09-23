@@ -12,8 +12,18 @@ body {
     font-family: "DM Serif Text" ;
 }
 
-h1,
-h2,
+h1 {
+    color: var(--secondary);
+    text-decoration: underline;
+    text-decoration: line-through;
+
+}
+h2 {
+    text-emphasis: triangle;
+    text-decoration: underline
+}
+
+
 h3 {
     color: var(--primary);
     font-family: "DM Serif Text"
@@ -21,6 +31,7 @@ h3 {
 
 li::marker {
     color: var(--secondary);
+    font-family: "DM Serif Text";
 }
 
 img {
@@ -32,9 +43,13 @@ img {
 
 ul {
     color: var(--primary);
+    font-size: 5mm;
+    font-weight: 700;
+    font-style: initial;
 }
 
 ol {
     color: var(--accent);
+    font-style: oblique;
 }
 
