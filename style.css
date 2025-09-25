@@ -7,7 +7,7 @@
 }
 h2 {
     border: 6.7px solid rebeccapurple;
-    padding: 20px 20px
+    padding: 20px 20px;
     
 }
 
@@ -34,13 +34,13 @@ h1 {
 }
 h2 {
     text-emphasis: triangle;
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 
 h3 {
     color: var(--primary);
-    font-family: "DM Serif Text"
+    font-family: "DM Serif Text";
 }
 
 li::marker {
@@ -60,10 +60,17 @@ ul {
     font-size: 5mm;
     font-weight: 700;
     font-style: initial;
+    margin:  auto;
+    background: rebeccapurple;
+    width: 67%;
 }
 
 ol {
     color: var(--accent);
     font-style: oblique;
+    border: 2px dashed powderblue;
 }
 
+.music {
+    color: var(--secondary);
+}
