@@ -66,11 +66,11 @@ ul {
 }
 
 ol {
-    color: var(--accent);
+    color: var(--text);
     font-style: oblique;
     border: 2px dashed rgb(255, 255, 255);
     margin: auto;
-    background: rgb(0, 0, 0);
+    background: rgb(41, 3, 43);
 }
 
 p.music {
