@@ -68,9 +68,9 @@ ul {
 ol {
     color: var(--accent);
     font-style: oblique;
-    border: 2px dashed powderblue;
+    border: 2px dashed rgb(255, 255, 255);
     margin: auto;
-    background: rebeccapurple;
+    background: rgb(0, 0, 0);
 }
 
 p.music {
