@@ -1,12 +1,12 @@
 :root {
 --text: #ebfaea;
---background: #240227;
+--background: #320836;
 --primary: #8ee383;
 --secondary: #42ad9f;
 --accent: #37b5d2;
 }
 h2 {
-    border: 6.7px solid rebeccapurple;
+    border: 6.7px solid rgb(0, 0, 0);
     padding: 20px 20px;
     
 }
@@ -61,7 +61,7 @@ ul {
     font-weight: 700;
     font-style: initial;
     margin:  auto;
-    background: rebeccapurple;
+    background: rgb(48, 28, 68);
     width: 67%;
 }
 
@@ -77,4 +77,8 @@ p.music {
     font-size: 1.5em;
     font-family:'Times New Roman', Times, serif
     heigh 50px
+}
+
+a {
+    color:lavender;
 }
