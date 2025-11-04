@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="index.html">Home page</a></p>
+    <p>🎈</p>
+
+<script>
+  function handleKeyDown(event){
+    if (event.key =="ArrowUp") {
+      style.fontSize = "10px";
+      }
+    }
+  window.addEventListener("keydown", handleKeyDown );
+  window.addEventListener("keyup", event => {
+    if (event.key == "v") {
+      style.fontSize = "10px";
+    }
+  });
+ function handleKeyDown(event){
+    if (event.key =="b") {
+      document.body.style.background = "blue";
+      }
+    }
+</script>
+</body>
+</html>
