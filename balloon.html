@@ -11,20 +11,23 @@
 </head>
 <body>
     <p><a href="index.html">Home page</a></p>
-    <p>🎈</p>
+    <p id="balloon">🎈</p>
 
-<script>
-  function handleKeyDown(event){
-    window.addEventListener("keydown", event => {
+<script> 
+  let balloonEl= document.getElementById("balloon")
+  let fontSize = 10;
+  function handleKeyDown(event) {
     if (event.key == "ArrowUp") {
-      style.fontSize = "10px";
+      fontSize *= 1.1;
+      balloonEl.style.fontSize = fontSize + "px";
+      event.preventDefault()
     }
-  });
-  window.addEventListener("keyup", event => {
-    if (event.key == "ArrowDown") {
-      style.fontSize = "5px";
-    }
-  });
+    if (event.key =="ArrowDown") {
+       font /=1.1
+     }
+     window.addEventListener("keydown", handleKeyDown)
+   }
+
   </script>
 </body>
 </html>
