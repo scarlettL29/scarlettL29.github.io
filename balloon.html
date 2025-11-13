@@ -11,25 +11,27 @@
 </head>
 <body>
     <p><a href="index.html">Home page</a></p>
-         <p id="balloon">🎈</p>
+        <p id="balloon">🎈</p>
 
-<script> 
-  let balloonEl= document.getElementById("balloon");
+<script>
+  let balloonEl = document.getElementById("balloon");
   let fontSize = 10;
   balloonEl.style.fontSize = fontSize + "px";
   function handleKeyDown(event) {
     if (event.key == "ArrowUp") {
-      fontSize *= 1.1;
+     fontSize *= 1.1;
+     balloonEl.style.fontSize = fontSize + "px";
+      event.preventDefault();
+    }
+}     function handleKeyDown(event) {
+    if (event.key == "ArrowDown") {
+      fontSize /=1.1;
       balloonEl.style.fontSize = fontSize + "px";
       event.preventDefault();
     }
-    if (event.key =="ArrowDown") {
-       fontSize /= 1.1
-      event.preventDefault();
-     }
-   }
-  window.addEventListener("keydown", handleKeyDown)
-  </script>
+  }
+  window.addEventListener("keydown", handleKeyDown);
+</script> 
 
 </body>
 </html>
