@@ -93,15 +93,9 @@
             console.log(greetingOutput.textContent)
             // TODO: Display a message like "Hello NAME, you are AGE years old!"
             // Challenge: If age < 13, show "You're just a kid!" instead.
-            if (4 < age < 13) {
+            if (age < 13) {
                 greetingOutput.textContent = "You're just a kid!"
-            }
-            if (age = 4) {
-                greetingOutput.textContent = "You are the youngest person ever!"
-            }
-            if (age < 4) {
-                greetingOutput.textContent = "You're just a kid!"
-            }
+           
 
         });
 
@@ -113,6 +107,10 @@
 
         // TODO: Update the background color of colorOutput whenever the color input changes.
         // Challenge: Also display the hex code and volume value dynamically.
+
+        colorInput.addEventListener("input", () => {
+            colorOutput,style.backgroundColor(colorInput.value)
+        });
 
         // --- PART 3 ---
         const subscribeBox = document.getElementById("subscribeBox");
