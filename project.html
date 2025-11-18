@@ -29,6 +29,8 @@
 
         btnGreet.addEventListener("click", () => {
             let name = nameInput.value;
+            greetingOutput.textContent = "Incorrect. I play waterpolo."
+            console.log(greetingOutput.textContent)
             if (sportInput = "waterpolo") {
                 greetingOutput.textContent = "Correct!";
             }
