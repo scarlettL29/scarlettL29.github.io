@@ -31,8 +31,11 @@
 
         btnGreet.addEventListener("click", () => {
             let sport = sportInput.value;
-            greetingOutput.textContent = "Incorrect. I do not play " + sport + ", I play waterpolo"
+            greetingOutput.textContent = "Incorrect. I do not play " + sport + ", I play waterpolo."
             console.log(greetingOutput.textContent)
+            if (sport = "waterpolo") {
+                greetingOutput.textContent = "Correct!"
+            }
         });
     </script>
 </body>
