@@ -28,12 +28,9 @@
         const answer1Output = document.getElementById("answer1Ourput");
 
         btnGreet.addEventListener("click", () => {
-            let name = nameInput.value;
-            greetingOutput.textContent = "Incorrect. I play waterpolo."
+            let sport = sportInput.value;
+            greetingOutput.textContent = "Incorrect. I don't play " + sport + ", I play waterpolo."
             console.log(greetingOutput.textContent)
-            if (sportInput = "waterpolo") {
-                greetingOutput.textContent = "Correct!";
-            }
         });
     </script>
 </body>
