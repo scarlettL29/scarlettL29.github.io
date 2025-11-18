@@ -3,42 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Year guesser</title>
+<link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section id="question1">
-        <h2>Quiz about Scarlett</h2>
-        <h3>What sport do I play?</h3>
+    <section id="yearGuesser">
+        <h2>I can guess the year!</h2>
+        <h3>To be able to guess, what yearwas last year?</h3>
         <label>
-            Type in your answer here without spaces or capital letters
-            <input id="sportInput" type="text" placeholder="Enter your answer">
+            Type in your answer here: 
+            <input id="lastyear" type="number" placeholder="Enter your answer">
         </label>
         
-        <button id="btnGreet">Check</button>
+        <button id="btnGreet">Guess the current year!</button>
         <div class="output" id="greetingOutput"></div>
     </section>
 
     <script>
- const sportInput = document.getElementById("sportInput");
+    const sportInput = document.getElementById("yearInput");
         
         const btnGreet = document.getElementById("btnGreet");
         const greetingOutput = document.getElementById("greetingOutput");
 
         btnGreet.addEventListener("click", () => {
-            let sport = sportInput.value;
-            greetingOutput.textContent = "Incorrect. I do not play " + sport + ", I play waterpolo."
+            let lastyear =lastyear.value;
+            greetingOutput.textContent = "The current year is " + lastyear + 1
             console.log(greetingOutput.textContent)
-            if (sport == "waterpolo") {
-                greetingOutput.textContent = "Correct!"
-            }
+            
         });
     </script>
 </body>
-
-
 </html>
