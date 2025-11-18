@@ -11,26 +11,27 @@
 </head>
 
 <body>
-    <section id="Quiz"> 
-         <h2>Quiz on Scarlett</h2>
-         <p> <h3> 1. What sport do I play?</h3> </p>
-         <br>
-       <label>
-            Type in your answer here, do not include spaces or capital letters
-            <input id="sportInput" type="text" placeholder="Enter your answer here">
+    <section id="question1">
+        <h2>1. What sport do I play?</h2>
+        <label>
+            Name:
+            <input id="sportInput" type="text" placeholder="Enter your answer">
         </label>
-        <button id="btnCheckone">Check answer</button>
-        <div class="output" id="answeroneOutput"></div>
+        
+        <button id="btnGreet">Check</button>
+        <div class="output" id="greetingOutput"></div>
+    </section>
 
     <script>
  const sportInput = document.getElementById("sportInput");
-        const btnCheckone = document.getElementById("btnCheckone");
-        const answeroneOutput = document.getElementById("answeroneOurput");
+        
+        const btnGreet = document.getElementById("btnGreet");
+        const greetingOutput = document.getElementById("greetingOutput");
 
         btnGreet.addEventListener("click", () => {
             let sport = sportInput.value;
-            greetingOutput.textContent = "Incorrect. I don't play " + sport + ", I play waterpolo.";
-            console.log(greetingOutput.textContent);
+            greetingOutput.textContent = "Incorrect. I do not play " + sport + ", I play waterpolo"
+            console.log(greetingOutput.textContent)
         });
     </script>
 </body>
