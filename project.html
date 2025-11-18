@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,30 @@
 </head>
 
 <body>
-    
+    <section id="Quiz"> 
+         <h2>Quiz on Scarlett</h2>
+         <p> <h3> 1. What sport do I play?</h3> </p>
+       <label>
+            Type in your answer here, do not include spaces or capital letters
+            <input id="sportInput" type="text" placeholder="Enter your answer here">
+        </label>
+        <button id="btnCheck1">Check answer</button>
+        <div class="output" id="answer1Output"></div>
+
+    <script>
+ const sportInput = document.getElementById("sportInput");
+        const btnCheck1 = document.getElementById("btnCheck1");
+        const answer1Output = document.getElementById("answer1Ourput");
+
+        btnGreet.addEventListener("click", () => {
+            let name = nameInput.value;
+            greetingOutput.textContent = "Hello " + name + ", you are " + age + " years old!"
+            console.log(greetingOutput.textContent)
+            if (sportInput = "waterpolo") {
+                greetingOutput.textContent = "Correct!";
+            }
+        });
+    </script>
 </body>
 
 
