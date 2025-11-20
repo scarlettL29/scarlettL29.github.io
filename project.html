@@ -23,21 +23,7 @@
         <div class="output" id="greetingOutput"></div>
     </section>
 
-
-
-<section id="question2">
-        <h3>What instrument do I play?</h3>
-        <label>
-            Type in your answer here without spaces or capital letters
-            <input id="instrumentInput" type="text" placeholder="Enter your answer">
-        </label>
-        
-        <button id="btnInstrument">Check</button>
-        <div class="hello" id="greetingInstrument"></div>
-    </section>
-
     <script>
-//question 1
  const sportInput = document.getElementById("sportInput");
         
         const btnGreet = document.getElementById("btnGreet");
@@ -47,28 +33,37 @@
             let sport = sportInput.value;
             greetingOutput.textContent = "Incorrect. I do not play " + sport + ", I play waterpolo."
             console.log(greetingOutput.textContent)
-            if (instrument == "waterpolo") {
+            if (sport == "waterpolo") {
                 greetingOutput.textContent = "Correct!"
             }
         });
-    //question2
- const instrumentInput = document.getElementById("instrumentInput");
-        
-        const hello = document.getElementById("hello");
-        const greetingInstrument = document.getElementById("greetingInstrument");
-
-        hello.addEventListener("click", () => {
-            let instrument = instrumentInput.value;
-            greetingOutput.textContent = "Incorrect. I do not play the " + instrument + ", I play the violin."
-            console.log(greetingOutput.textContent)
-            if (instrument == "violin") {
-                greetingOutput.textContent = "Correct!"
-            }
-        });
+   
     </script>
    
+    <section id="Buttons">
+        <h2>Guess the correct button!</h2>
+        <button id="btnOne">1</button>
+        <div class="one" id="btnUno"></div>
+        <button id="btnTwo">2</button>
+        <div class="two" id="btnDos"></div>
+        <button id="btnThree">3</button>
+        <div class="three" id="btnTres"></div>
+    </section>
 
-   <section id=""
+    <script>
+        btnOne.addEventListener("click", () => {
+            btnUno.textContent = "Wrong. Try again."
+        })
+
+         btnTwo.addEventListener("click", () => {
+            btnDos.textContent = "Wrong. Try again."
+        })
+
+         btnThree.addEventListener("click", () => {
+            btnTres.textContent = "Correct! You may now move on."
+        });
+    </script>
+
 </body>
 
 
