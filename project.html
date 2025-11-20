@@ -23,7 +23,7 @@
         <div class="output" id="greetingOutput"></div>
     </section>
 
-    <script>
+<script>
  const sportInput = document.getElementById("sportInput");
         
         const btnGreet = document.getElementById("btnGreet");
@@ -33,11 +33,39 @@
             let sport = sportInput.value;
             greetingOutput.textContent = "Incorrect. I do not play " + sport + ", I play waterpolo."
             console.log(greetingOutput.textContent)
-            if (sport == "waterpolo") {
+            if (instrument == "waterpolo") {
                 greetingOutput.textContent = "Correct!"
             }
         });
     </script>
+
+<section id="question2">
+        <h3>What instrument do I play?</h3>
+        <label>
+            Type in your answer here without spaces or capital letters
+            <input id="instrumentInput" type="text" placeholder="Enter your answer">
+        </label>
+        
+        <button id="btnInstrument">Check</button>
+        <div class="hello" id="greetingInstrument"></div>
+    </section>
+
+    <script>
+ const instrumentInput = document.getElementById("instrumentInput");
+        
+        const hello = document.getElementById("hello");
+        const greetingInstrument = document.getElementById("greetingInstrument");
+
+        hello.addEventListener("click", () => {
+            let instrument = instrumentInput.value;
+            greetingOutput.textContent = "Incorrect. I do not play the " + instrument + ", I play the violin."
+            console.log(greetingOutput.textContent)
+            if (instrument == "waterpolo") {
+                greetingOutput.textContent = "Correct!"
+            }
+        });
+    </script>
+   
 </body>
 
 
