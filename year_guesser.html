@@ -16,7 +16,7 @@
         <h3>To be able to guess, what is the current year?</h3>
         <label>
             Type in your answer here: 
-            <input id="lastyear" type="number" placeholder="Enter your answer">
+            <input id="yearInput" type="number" placeholder="Enter your answer">
         </label>
         
         <button id="btnGreet">Guess the current year!</button>
@@ -30,8 +30,8 @@
         const greetingOutput = document.getElementById("greetingOutput");
 
         btnGreet.addEventListener("click", () => {
-            let lastyear = lastyear.value;
-            greetingOutput.textContent = "The current year is " + lastyear
+            let year = yearInput.value;
+            greetingOutput.textContent = "The current year is " + year
             console.log(greetingOutput.textContent)
             
         });
