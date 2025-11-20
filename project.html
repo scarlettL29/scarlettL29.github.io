@@ -1,70 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <section id="question1">
-        <h2>Quiz about Scarlett</h2>
-        <h3>What sport do I play?</h3>
-        <label>
-            Type in your answer here without spaces or capital letters
-            <input id="sportInput" type="text" placeholder="Enter your answer">
-        </label>
-        
-        <button id="btnGreet">Check</button>
-        <div class="output" id="greetingOutput"></div>
+      <h2>Random quiz</h2>
+      <h3>What sport do I play?</h3>
+      <label>
+        Type in your answer here without spaces or capital letters
+        <input id="sportInput" type="text" placeholder="Enter your answer" />
+      </label>
+
+      <button id="btnGreet">Check</button>
+      <div class="output" id="greetingOutput"></div>
     </section>
 
-    <script>
- const sportInput = document.getElementById("sportInput");
-        
-        const btnGreet = document.getElementById("btnGreet");
-        const greetingOutput = document.getElementById("greetingOutput");
-
-        btnGreet.addEventListener("click", () => {
-            let sport = sportInput.value;
-            greetingOutput.textContent = "Incorrect. I do not play " + sport + ", I play waterpolo."
-            console.log(greetingOutput.textContent)
-            if (sport == "waterpolo") {
-                greetingOutput.textContent = "Correct!"
-            }
-        });
-   
-    </script>
-   
     <section id="Buttons">
-        <h2>Guess the correct button!</h2>
-        <button id="btnOne">1</button>
-        <div class="one" id="btnUno"></div>
-        <button id="btnTwo">2</button>
-        <div class="two" id="btnDos"></div>
-        <button id="btnThree">3</button>
-        <div class="three" id="btnTres"></div>
+      <h3>Click one of the three buttons.</h3>
+      <button id="btnOne">1</button>
+      <div class="one" id="btnUno"></div>
+      <button id="btnTwo">2</button>
+      <div class="two" id="btnDos"></div>
+      <button id="btnThree">3</button>
+      <div class="three" id="btnTres"></div>
     </section>
 
+    <section id="answers">
+      <span id="currentScore">Score: 0</span>
+    </section>
+    
+
     <script>
-        btnOne.addEventListener("click", () => {
-            btnUno.textContent = "Wrong. Try again."
-        })
+      const sportInput = document.getElementById("sportInput");
+      const btnGreet = document.getElementById("btnGreet");
+      const greetingOutput = document.getElementById("greetingOutput");
 
-         btnTwo.addEventListener("click", () => {
-            btnDos.textContent = "Wrong. Try again."
-        })
+      btnGreet.addEventListener("click", () => {
+        let sport = sportInput.value;
+        greetingOutput.textContent =
+          "Incorrect. I do not play " + sport + ", I play waterpolo.";
+        console.log(greetingOutput.textContent);
+        if (sport == "waterpolo") {
+          greetingOutput.textContent = "Correct!";
+        }
+      });
 
-         btnThree.addEventListener("click", () => {
-            btnTres.textContent = "Correct! You may now move on."
-        });
+      btnOne.addEventListener("click", () => {
+        btnUno.textContent = "Wrong. Try again.";
+      });
+
+      btnTwo.addEventListener("click", () => {
+        btnDos.textContent = "Wrong. Try again.";
+      });
+
+      btnThree.addEventListener("click", () => {
+        btnTres.textContent = "Correct! You may now move on.";
+      });
+
+   //score 
+
+      function updateScore() {
+        currentScore = currentScore + 1
+      }
+
+
+
     </script>
-
-</body>
-
-
+  </body>
 </html>
