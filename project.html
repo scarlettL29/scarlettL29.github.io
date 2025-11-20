@@ -23,21 +23,7 @@
         <div class="output" id="greetingOutput"></div>
     </section>
 
-<script>
- const sportInput = document.getElementById("sportInput");
-        
-        const btnGreet = document.getElementById("btnGreet");
-        const greetingOutput = document.getElementById("greetingOutput");
 
-        btnGreet.addEventListener("click", () => {
-            let sport = sportInput.value;
-            greetingOutput.textContent = "Incorrect. I do not play " + sport + ", I play waterpolo."
-            console.log(greetingOutput.textContent)
-            if (instrument == "waterpolo") {
-                greetingOutput.textContent = "Correct!"
-            }
-        });
-    </script>
 
 <section id="question2">
         <h3>What instrument do I play?</h3>
@@ -51,6 +37,21 @@
     </section>
 
     <script>
+//question 1
+ const sportInput = document.getElementById("sportInput");
+        
+        const btnGreet = document.getElementById("btnGreet");
+        const greetingOutput = document.getElementById("greetingOutput");
+
+        btnGreet.addEventListener("click", () => {
+            let sport = sportInput.value;
+            greetingOutput.textContent = "Incorrect. I do not play " + sport + ", I play waterpolo."
+            console.log(greetingOutput.textContent)
+            if (instrument == "waterpolo") {
+                greetingOutput.textContent = "Correct!"
+            }
+        });
+    //question2
  const instrumentInput = document.getElementById("instrumentInput");
         
         const hello = document.getElementById("hello");
@@ -60,12 +61,14 @@
             let instrument = instrumentInput.value;
             greetingOutput.textContent = "Incorrect. I do not play the " + instrument + ", I play the violin."
             console.log(greetingOutput.textContent)
-            if (instrument == "waterpolo") {
+            if (instrument == "violin") {
                 greetingOutput.textContent = "Correct!"
             }
         });
     </script>
    
+
+   <section id=""
 </body>
 
 
