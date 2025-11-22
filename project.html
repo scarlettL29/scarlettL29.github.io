@@ -37,7 +37,7 @@
     </section>
 
     <section id="answers">
-      <span id="currentScore">Score: 0</span>
+      <br> <span id="currentScore">Score: 0</span>
     </section>
     
 
@@ -45,7 +45,8 @@
       const sportInput = document.getElementById("sportInput");
       const btnGreet = document.getElementById("btnGreet");
       const greetingOutput = document.getElementById("greetingOutput");
-
+      let score = 0;
+      const scoreDisplay = document.getElementById("currentScore")
       btnGreet.addEventListener("click", () => {
         let sport = sportInput.value;
         greetingOutput.textContent =
@@ -53,6 +54,8 @@
         console.log(greetingOutput.textContent);
         if (sport == "waterpolo") {
           greetingOutput.textContent = "Correct!";
+          score = score + 1; 
+          scoreDisplay.textContent = "Score: " + score;
         }
       });
 
@@ -65,6 +68,8 @@
       });
 
       btnThree.addEventListener("click", () => {
+        score = score + 1; 
+          scoreDisplay.textContent = "Score: " + score;
         btnTres.textContent = "Correct! You may now move on.";
       });
 
