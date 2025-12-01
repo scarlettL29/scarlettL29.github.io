@@ -17,38 +17,51 @@
     <section id="question1">
       <h2>Random quiz</h2>
       <h5> <a href="index.html">Homepage</a> </h5>
-      <h3>What sport do I play?</h3>
+      <h3>What is 2+2?</h3>
       <label>
-        Type in your answer here without spaces or capital letters
-        <input id="sportInput" type="text" placeholder="Enter your answer" />
+        Type in your answer here
+        <input id="sportInput" type="number" placeholder="Enter your answer" />
       </label>
 
-      <button id="btnGreet">Check</button>
-      <div class="output" id="greetingOutput"></div>
+      <button id="btnNumber">Check</button>
+      <div class="output" id="numberOutput"></div>
     </section>
 
     <section id="Buttons">
-      <h3>Click one of the three buttons.</h3>
-      <button id="btnOne">1</button>
+      <h3>Which of the following is NOT true?</h3>
+      <button id="btnOne">The title at the top of this page is "Random quiz"</button>
       <div class="one" id="btnUno"></div>
-      <button id="btnTwo">2</button>
+      <button id="btnTwo">I am alive</button>
       <div class="two" id="btnDos"></div>
-      <button id="btnThree">3</button>
+      <button id="btnThree">My website is in black and white</button>
       <div class="three" id="btnTres"></div>
     </section>
 
     <section id="food">
-        <h3>What is/are my top 3 favorite food(s)?  (answer on homepage)</h3>
-       <br> <label><input type="checkbox" id="spaghetti">Spaghetti</label>
-        <br> <label><input type="checkbox" id="kale">Kale</label>
-       <br> <label><input type="checkbox" id="potato">Potato</label>
-       <br> <label><input type="checkbox" id="salmon">Salmon</label>
-       <br> <label><input type="checkbox" id="stuffing">Stuffing</label>
-       <br> <label><input type="checkbox" id="rice">Rice</label>
+        <h3>Which of the following colors are in the rainbow?</h3>
+       <br> <label><input type="checkbox" id="red">red</label>
+        <br> <label><input type="checkbox" id="gold">gold</label>
+       <br> <label><input type="checkbox" id="black">black</label>
+       <br> <label><input type="checkbox" id="violet">violet</label>
+       <br> <label><input type="checkbox" id="gray">gray</label>
+       <br> <label><input type="checkbox" id="green">green</label>
 <br>
         <button id="btnSubmit">Check</button>
         <div class="output" id="modeOutput"></div>
     </section>
+
+
+    <section id="name">
+    <h3>What is my name?</h3>
+     <label>
+        First name only, no capital letters
+        <input id="mynameInput" type="text" placeholder="Enter your answer" />
+      </label>
+
+      <button id="btnName">Check</button>
+      <div class="output" id="nameOutput"></div>
+    </section>
+
 
     <section id="answers">
       <br> <h1><span id="currentScore">Score: 0</span></h1>
@@ -56,18 +69,19 @@
     
 
     <script>
-      const sportInput = document.getElementById("sportInput");
-      const btnGreet = document.getElementById("btnGreet");
-      const greetingOutput = document.getElementById("greetingOutput");
+      const numberInput = document.getElementById("numberInput");
+      const btnNumber = document.getElementById("btnNumber");
+      const numberOutput = document.getElementById("numberOutput");
       let score = 0;
       const scoreDisplay = document.getElementById("currentScore")
-      btnGreet.addEventListener("click", () => {
-        let sport = sportInput.value;
-        greetingOutput.textContent =
-          "Incorrect. I do not play " + sport + ", I play waterpolo.";
-        console.log(greetingOutput.textContent);
-        if (sport == "waterpolo") {
-          greetingOutput.textContent = "Correct!";
+
+      btnNumber.addEventListener("click", () => {
+        let sport = numberInput.value;
+        numberOutput.textContent =
+          "Incorrect. 2+2 ≠  " + sport + ", 2+2 = 4.";
+        console.log(numberOutput.textContent);
+        if (sport == "4") {
+          numberOutput.textContent = "Correct!";
           score = score + 1; 
           scoreDisplay.textContent = "Score: " + score;
         }
@@ -86,6 +100,46 @@
           scoreDisplay.textContent = "Score: " + score;
         btnTres.textContent = "Correct! You may now move on.";
       });
+
+
+    const btnSubmit = document.getElementById("btnSubmit");
+    const modeOutput = document.getElementById("modeOutput");
+    
+    btnSubmit.addEventListener("click", () => {
+
+        const red = document.getElementById("red").checked;
+        const green = document.getElementById("green").checked;
+        const violet = document.getElementById("violet").checked;
+        const gold = document.getElementById("gold").checked;
+        const black = document.getElementById("black").checked;
+        const gray = document.getElementById("gray").checked;
+        
+ 
+        if (red && green && violet && !gold && !black && !gray) {
+            modeOutput.textContent = "Correct!";
+
+            if (modeOutput.dataset.scored !== 'true') {
+                score = score + 1;
+                document.getElementById("currentScore").textContent = "Score: " + score;
+                modeOutput.dataset.scored = 'true';
+            }
+        } else {
+            modeOutput.textContent = "Wrong. Check ALL the correct answers.";
+        }
+        
+    });
+      btnName.addEventListener("click", () => {
+        let name = mynameInput.value;
+        nameOutput.textContent =
+          "Incorrect. My name is not " + name + ". My name is scarlett";
+        console.log(nameOutput.textContent);
+        if (name == "scarlett") {
+          nameOutput.textContent = "Correct!";
+          score = score + 1; 
+          scoreDisplay.textContent = "Score: " + score;
+        }
+      });
+    
 
    //score 
 
