@@ -62,6 +62,18 @@
       <div class="output" id="nameOutput"></div>
     </section>
 
+    <section id="pounds">
+      <h3>Which is heavier: 100 lbs of steel or 100 lbs of feathers?</h3>
+      <br>
+      <button id="btnSteel">100 lbs of steel</button>
+      <div class="steel" id="btnS"></div>
+      <br>
+      <button id="btnFeathers">100 lbs of feathers</button>
+      <div class="feathers" id="btnF"></div>
+      <br>
+      <button id="btnBoth">Both</button>
+      <div class="both" id="btnB"></div>
+    </section>
 
     <section id="answers">
       <br> <h1><span id="currentScore">Score: 0</span></h1>
@@ -140,7 +152,20 @@
         }
       });
     
+      btnSteel.addEventListener("click", () => {
+        btnS.textContent = "Wrong. Try again.";
+      });
 
+      btnFeathers.addEventListener("click", () => {
+        btnF.textContent = "Wrong. Try again."
+      });
+
+      btnBoth.addEventListener("click", () => {
+        btnB.textContent = "Correct! They both weight 100 lbs."
+        score = score + 1; 
+          scoreDisplay.textContent = "Score: " + score;
+      });
+      
    //score 
 
       function updateScore() {
