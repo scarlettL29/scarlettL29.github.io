@@ -14,195 +14,65 @@
 </head>
 <body>
     <h2>Word Game</h2>
+    <h3>Guess the five letter word correctly! (no lowercase letters)</h3>   
 
-    <section>
-    <h3>Guess the five letter word correctly! (no lowercase letters)</h3>
+    <section id="one">
         <label>
         Letter 1:<br>
         <input id="oneInput" type="text" placeholder="Answer here" />
       </label>
 
       <button id="btnOne">Check</button>
-      <div class="output" id="oneOutput"></div> <br>
+      <div class="output" id="oneOutput"></div>
+    </section>
 
-      Letter 2:<br>
-        <input id="twoInput" type="text" placeholder="Answer here" />
-      </label>
+    <section id="two">
+        <label>
+          Letter 2: <br>
+          <input id="twoInput" type="text" placeholder="Answer here" />
+        </label>
 
-      <button id="btnTwo">Check</button>
-      <div class="output" id="twoOutput"></div> <br>
+        <button id="btnTwo">Check</button>
+        <div class="output" id="twoOutput"></div>
+    </section>
 
-      Letter 3:<br>
-        <input id="threeInput" type="text" placeholder="Answer here" />
-      </label>
+   <section id="three">
+        <label>
+          Letter 2: <br>
+          <input id="threeInput" type="text" placeholder="Answer here" />
+        </label>
 
-      <button id="btnThree">Check</button>
-      <div class="output" id="threeOutput"></div> <br>
+        <button id="btnThree">Check</button>
+        <div class="output" id="threeOutput"></div>
+    </section>
 
-      Letter 4:<br>
-        <input id="fourInput" type="text" placeholder="Answer here" />
-      </label>
+    <section id="four">
+        <label>
+          Letter 2: <br>
+          <input id="fourInput" type="text" placeholder="Answer here" />
+        </label>
 
-      <button id="btnFour">Check</button>
-      <div class="output" id="fourOutput"></div> <br>
+        <button id="btnFour">Check</button>
+        <div class="output" id="fourOutput"></div>
+    </section>
 
-      Letter 5:<br>
-        <input id="fiveInput" type="text" placeholder="Answer here" />
-      </label>
+    <section id="five">
+        <label>
+          Letter 2: <br>
+          <input id="fiveInput" type="text" placeholder="Answer here" />
+        </label>
 
-      <button id="btnFive">Check</button>
-      <div class="output" id="fiveOutput"></div> <br>
-
-       <br>
-       <label>
-        Final guess (no lowercase letters):
-        <br><br>
-        <input id="guessInput" type="text" placeholder="Answer here" />
-      </label>
-       <button id="btnGuess">Check</button>
-      <div class="output" id="guessOutput"></div> <br><br>
-
+        <button id="btnFive">Check</button>
+        <div class="output" id="fiveOutput"></div>
     </section>
 
     <script>
-      let 
-    btnOne.addEventListener("click", () => {
-        let one = oneInput.value.toUpperCase();
-        
-        if (one === "R") {
-          oneOutput.textContent = "Correct!";
-          oneOutput.style.color = "green";
-        } else if (one === "A" || one === "T" || one === "I" || one === "O") {
-          oneOutput.textContent = "Incorrect placement";
-          oneOutput.style.color = "gold"; // Yellow for incorrect placement
-        } else {
-          oneOutput.textContent = "Incorrect";
+
+      btnOne.addEventListener("click", () => {
+        let one = oneOnput.value;
+          oneOutput.textContent ="Incorrect";
           oneOutput.style.color = "red";
-        }
       });
-
-       btnTwo.addEventListener("click", () => {
-      let two = twoInput.value;
-        twoOutput.textContent =
-          "Incorrect";
-          twoOutput.style.color = "red";
-        console.log(twoOutput.textContent);
-        if (two == "A") {
-          twoOutput.textContent = "Correct!";
-          twoOutput.style.color = "green";
-        }
-        if (two == "R") {
-          twoOutput.textContent = "Incorrect placement";
-          twoOutput.style.color = "yellow";
-        }
-        if (two == "T") {
-          twoOutput.textContent = "Incorrect placement";
-          twoOutput.style.color = "yellow";
-        }
-        if (two == "I") {
-          twoOutput.textContent = "Incorrect placement";
-          twoOutput.style.color = "yellow";
-        }
-        if (two == "O") {
-          twoOutput.textContent = "Incorrect placement";
-          twoOutput.style.color = "yellow";
-        }
-      });
-
-       btnThree.addEventListener("click", () => {
-      let three = threeInput.value;
-        threeOutput.textContent =
-          "Incorrect";
-          threeOutput.style.color = "red";
-        console.log(threeOutput.textContent);
-        if (three == "T") {
-          threeOutput.textContent = "Correct!";
-          threeOutput.style.color = "green";
-        }
-        if (three == "A") {
-          threeOutput.textContent = "Incorrect placement";
-          threeOutput.style.color = "yellow";
-        }
-        if (three == "R") {
-          threeOutput.textContent = "Incorrect placement";
-          threeOutput.style.color = "yellow";
-        }
-        if (three == "I") {
-          threeOutput.textContent = "Incorrect placement";
-          threeOutput.style.color = "yellow";
-        }
-        if (three == "O") {
-          threeOutput.textContent = "Incorrect placement";
-          threeOutput.style.color = "yellow";
-        }
-      });
-
-      btnFour.addEventListener("click", () => {
-      let four = fourInput.value;
-        fourOutput.textContent =
-          "Incorrect";
-          fourOutput.style.color = "red";
-        console.log(fourOutput.textContent);
-        if (four == "I") {
-          fourOutput.textContent = "Correct!";
-          fourOutput.style.color = "green";
-        }
-        if (four == "A") {
-          fourOutput.textContent = "Incorrect placement";
-          fourOutput.style.color = "yellow";
-        }
-        if (four == "R") {
-          fourOutput.textContent = "Incorrect placement";
-          fourOutput.style.color = "yellow";
-        }
-        if (four == "T") {
-          fourOutput.textContent = "Incorrect placement";
-          fourOutput.style.color = "yellow";
-        }
-        if (four == "O") {
-          fourOutput.textContent = "Incorrect placement";
-          fourOutput.style.color = "yellow";
-        }
-      });
-
-      btnFive.addEventListener("click", () => {
-      let five = fiveInput.value;
-        fiveOutput.textContent =
-          "Incorrect";
-          fiveOutput.style.color = "red";
-        console.log(fiveOutput.textContent);
-        if (five == "O") {
-          fiveOutput.textContent = "Correct!";
-          fiveOutput.style.color = "green";
-        }
-        if (five == "A") {
-          fiveOutput.textContent = "Incorrect placement";
-          fiveOutput.style.color = "yellow";
-        }
-        if (five == "R") {
-          fiveOutput.textContent = "Incorrect placement";
-          fiveOutput.style.color = "yellow";
-        }
-        if (five == "T") {
-          fiveOutput.textContent = "Incorrect placement";
-          fiveOutput.style.color = "yellow";
-        }
-        if (five == "R") {
-          fiveOutput.textContent = "Incorrect placement";
-          fiveOutput.style.color = "yellow";
-        }
-      });
-      btnGuess.addEventListener("click", () => {
-      let guess = guessInput.value;
-        guessOutput.textContent =
-          "Incorrect";
-          
-        console.log(oneOutput.textContent);
-        if (guess == "RATIO") {
-          cguessOutput.textContent = "Correct!";
-         
-        }
     </script>
-
 </body>
 </html>
