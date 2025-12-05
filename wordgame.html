@@ -18,7 +18,7 @@
 
     <section id="one">
         <label>
-        Letter 1:<br>
+        Letter 1 (lowercase only): <br>
         <input id="oneInput" type="text" placeholder="Answer here" />
       </label>
 
@@ -28,50 +28,72 @@
 
     <section id="two">
         <label>
-          Letter 2: <br>
-          <input id="twoInput" type="text" placeholder="Answer here" />
-        </label>
+        Letter 1 (lowercase only): <br>
+        <input id="twoInput" type="text" placeholder="Answer here" />
+      </label>
 
-        <button id="btnTwo">Check</button>
-        <div class="output" id="twoOutput"></div>
+      <button id="btnTwo">Check</button>
+      <div class="output" id="twoOutput"></div>
     </section>
-
-   <section id="three">
-        <label>
-          Letter 2: <br>
-          <input id="threeInput" type="text" placeholder="Answer here" />
-        </label>
-
-        <button id="btnThree">Check</button>
-        <div class="output" id="threeOutput"></div>
-    </section>
-
-    <section id="four">
-        <label>
-          Letter 2: <br>
-          <input id="fourInput" type="text" placeholder="Answer here" />
-        </label>
-
-        <button id="btnFour">Check</button>
-        <div class="output" id="fourOutput"></div>
-    </section>
-
-    <section id="five">
-        <label>
-          Letter 2: <br>
-          <input id="fiveInput" type="text" placeholder="Answer here" />
-        </label>
-
-        <button id="btnFive">Check</button>
-        <div class="output" id="fiveOutput"></div>
-    </section>
-
+ 
     <script>
 
       btnOne.addEventListener("click", () => {
-        let one = oneOnput.value;
+        let one = oneInput.value;
           oneOutput.textContent ="Incorrect";
-          oneOutput.style.color = "red";
+          oneOutput.style.color= "red";
+
+        if (one == "r") {
+          oneOutput.textContent ="Correct!";
+          oneOutput.style.color= "green";
+        }
+
+        if (one == "a"){
+          oneOutput.textContent ="Incorrect placement";
+          oneOutput.style.color= "yellow";
+        }
+
+        if (one == "t"){
+          oneOutput.textContent ="Incorrect placement";
+          oneOutput.style.color= "yellow";
+        }
+        if (one == "i"){
+          oneOutput.textContent ="Incorrect placement";
+          oneOutput.style.color= "yellow";
+        }
+        if (one == "o"){
+          oneOutput.textContent ="Incorrect placement";
+          oneOutput.style.color= "yellow";
+        }
+      });
+
+      btnTwo.addEventListener("click", () => {
+        let two = twoInput.value;
+          twoOutput.textContent ="Incorrect";
+          twoOutput.style.color= "red";
+
+        if (two == "a") {
+          twoOutput.textContent ="Correct!";
+          twoOutput.style.color= "green";
+        }
+
+        if (two == "r") {
+          twoOutput.textContent ="Incorrect placement";
+          twoOutput.style.color= "yellow";
+        }
+
+        if (two == "t"){
+          twoOutput.textContent ="Incorrect placement";
+          twoOutput.style.color= "yellow";
+        }
+        if (two == "i"){
+          twoOutput.textContent ="Incorrect placement";
+          twoOutput.style.color= "yellow";
+        }
+        if (two == "o"){
+          twoOutput.textContent ="Incorrect placement";
+          twoOutput.style.color= "yellow";
+        }
       });
     </script>
 </body>
