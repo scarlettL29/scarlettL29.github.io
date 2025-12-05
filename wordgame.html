@@ -65,31 +65,19 @@
     </section>
 
     <script>
-     btnOne.addEventListener("click", () => {
-      let one = oneInput.value;
-        oneOutput.textContent =
-          "Incorrect";
-          oneOutput.style.color = "red";
-        console.log(oneOutput.textContent);
-        if (one == "R") {
+      let 
+    btnOne.addEventListener("click", () => {
+        let one = oneInput.value.toUpperCase();
+        
+        if (one === "R") {
           oneOutput.textContent = "Correct!";
           oneOutput.style.color = "green";
-        }
-        if (one == "A") {
+        } else if (one === "A" || one === "T" || one === "I" || one === "O") {
           oneOutput.textContent = "Incorrect placement";
-          oneOutput.style.color = "yellow";
-        }
-        if (one == "T") {
-          oneOutput.textContent = "Incorrect placement";
-          oneOutput.style.color = "yellow";
-        }
-        if (one == "I") {
-          oneOutput.textContent = "Incorrect placement";
-          oneOutput.style.color = "yellow";
-        }
-        if (one == "O") {
-          oneOutput.textContent = "Incorrect placement";
-          oneOutput.style.color = "yellow";
+          oneOutput.style.color = "gold"; // Yellow for incorrect placement
+        } else {
+          oneOutput.textContent = "Incorrect";
+          oneOutput.style.color = "red";
         }
       });
 
