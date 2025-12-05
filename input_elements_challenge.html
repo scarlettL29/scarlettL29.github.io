@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input Element Challenge</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: sans-serif;
@@ -111,24 +108,36 @@
         });
 
         // --- PART 3 ---
-        const subscribeBox = document.getElementById("subscribeBox");
+      const subscribeBox = document.getElementById("subscribeBox");
         const btnSubmit = document.getElementById("btnSubmit");
         const modeOutput = document.getElementById("modeOutput");
+        const lightMode = document.getElementById("lightMode");
+        const darkMode = document.getElementById("darkMode");
+        const systemMode = document.getElementById("systemMode");
 
         btnSubmit.addEventListener("click", () => {
-            // TODO: Find which radio button is checked and display it.
-            // Challenge: Include whether the user subscribed or not.
+            let selectedMode = "";
+            
             if (lightMode.checked) {
-                greetingOutput.textContent("Light mode")
-            };
-            if (darkMode.checked) {
-                greetingOutput.textContent("Dark mode")
-            };
-            if (systemMode.checked) {
-                greetingOutput.textContent("System mode")
-            };
-            console.log(greetingOutput.textContent);
+                selectedMode = lightMode.value; 
+            } else if (darkMode.checked) {
+                selectedMode = darkMode.value;
+            } else if (systemMode.checked) {
+                selectedMode = systemMode.value;
+            }
+            
+            let subscriptionStatus = "";
+            if (subscribeBox.checked) {
+                subscriptionStatus = "Subscribed!";
+            } else {
+                subscriptionStatus = "Not subscribed.";
+            }
+
+            modeOutput.textContent = "Mode: " + selectedMode +  ". Subscribed? " + subscriptionStatus;
+
+            console.log(modeOutput.textContent);
         });
+    </script>
     </script>
 </body>
 
