@@ -28,7 +28,7 @@
 
     <section id="two">
         <label>
-        Letter 2 (lowercase only): <br>
+        Letter 2: <br>
         <input id="twoInput" type="text" placeholder="Answer here" />
       </label>
 
@@ -38,7 +38,7 @@
  
     <section id="three">
         <label>
-        Letter 3 (lowercase only): <br>
+        Letter 3: <br>
         <input id="threeInput" type="text" placeholder="Answer here" />
       </label>
 
@@ -48,7 +48,7 @@
 
     <section id="four">
         <label>
-        Letter 4 (lowercase only): <br>
+        Letter 4: <br>
         <input id="fourInput" type="text" placeholder="Answer here" />
       </label>
 
@@ -58,7 +58,7 @@
 
     <section id="five">
         <label>
-        Letter 5 (lowercase only): <br>
+        Letter 5: <br>
         <input id="fiveInput" type="text" placeholder="Answer here" />
       </label>
 
@@ -66,6 +66,18 @@
       <div class="output" id="fiveOutput"></div>
     </section>
 
+
+   <p>
+     <section id="check">
+          <label>
+          Final guess (lowercase only): <br>
+          <input id="checkInput" type="text" placeholder="Answer here" />
+        </label>
+
+        <button id="btnCheck">Check</button>
+        <div class="output" id="checkOutput"></div>
+      </section>
+    </p>
     <script>
 
       btnOne.addEventListener("click", () => {
@@ -213,6 +225,17 @@
         }
       });
       
+      btnCheck.addEventListener("click", () => {
+        let check = checkInput.value;
+        checkOutput.textContent =
+          "Incorrect.";
+          checkOutput.style.color="red";
+        console.log(checkOutput.textContent);
+        if (check == "ratio") {
+          checkOutput.textContent = "Correct!";
+          checkOutput.style.color = "green";
+        }
+      });
     </script>
 </body>
 </html>
