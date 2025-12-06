@@ -28,7 +28,7 @@
 
     <section id="two">
         <label>
-        Letter 1 (lowercase only): <br>
+        Letter 2 (lowercase only): <br>
         <input id="twoInput" type="text" placeholder="Answer here" />
       </label>
 
@@ -36,6 +36,36 @@
       <div class="output" id="twoOutput"></div>
     </section>
  
+    <section id="three">
+        <label>
+        Letter 3 (lowercase only): <br>
+        <input id="threeInput" type="text" placeholder="Answer here" />
+      </label>
+
+      <button id="btnThree">Check</button>
+      <div class="output" id="threeOutput"></div>
+    </section>
+
+    <section id="four">
+        <label>
+        Letter 4 (lowercase only): <br>
+        <input id="fourInput" type="text" placeholder="Answer here" />
+      </label>
+
+      <button id="btnFour">Check</button>
+      <div class="output" id="fourOutput"></div>
+    </section>
+
+    <section id="five">
+        <label>
+        Letter 5 (lowercase only): <br>
+        <input id="fiveInput" type="text" placeholder="Answer here" />
+      </label>
+
+      <button id="btnFive">Check</button>
+      <div class="output" id="fiveOutput"></div>
+    </section>
+
     <script>
 
       btnOne.addEventListener("click", () => {
@@ -95,6 +125,94 @@
           twoOutput.style.color= "yellow";
         }
       });
+
+      btnThree.addEventListener("click", () => {
+        let three = threeInput.value;
+          threeOutput.textContent ="Incorrect";
+          threeOutput.style.color= "red";
+
+        if (three == "t") {
+          threeOutput.textContent ="Correct!";
+          threeOutput.style.color= "green";
+        }
+
+        if (three == "r") {
+          threeOutput.textContent ="Incorrect placement";
+          threeOutput.style.color= "yellow";
+        }
+
+        if (three == "a"){
+          threeOutput.textContent ="Incorrect placement";
+          threeOutput.style.color= "yellow";
+        }
+        if (three == "i"){
+          threeOutput.textContent ="Incorrect placement";
+          threeOutput.style.color= "yellow";
+        }
+        if (three == "o"){
+          threeOutput.textContent ="Incorrect placement";
+          threeOutput.style.color= "yellow";
+        }
+      });
+
+      btnFour.addEventListener("click", () => {
+        let four = fourInput.value;
+          fourOutput.textContent ="Incorrect";
+          fourOutput.style.color= "red";
+
+        if (four == "t") {
+          fourOutput.textContent ="Correct!";
+          fourOutput.style.color= "green";
+        }
+
+        if (four == "r") {
+          fourOutput.textContent ="Incorrect placement";
+          fourOutput.style.color= "yellow";
+        }
+
+        if (four == "a"){
+          fourOutput.textContent ="Incorrect placement";
+          fourOutput.style.color= "yellow";
+        }
+        if (four == "i"){
+          fourOutput.textContent ="Incorrect placement";
+          fourOutput.style.color= "yellow";
+        }
+        if (four == "o"){
+          fourOutput.textContent ="Incorrect placement";
+          fourOutput.style.color= "yellow";
+        }
+      });
+
+      btnFive.addEventListener("click", () => {
+        let five = fiveInput.value;
+          fiveOutout.textContent ="Incorrect";
+          fiveOutout.style.color= "red";
+
+        if (five == "o") {
+          fiveOutout.textContent ="Correct!";
+          fiveOutout.style.color= "green";
+        }
+
+        if (five == "r") {
+          fiveOutout.textContent ="Incorrect placement";
+          fiveOutout.style.color= "yellow";
+        }
+
+        if (five == "a"){
+          fiveOutout.textContent ="Incorrect placement";
+          fiveOutout.style.color= "yellow";
+        }
+        if (five == "i"){
+          fiveOutout.textContent ="Incorrect placement";
+          fiveOutout.style.color= "yellow";
+        }
+        if (five == "t"){
+          fiveOutout.textContent ="Incorrect placement";
+          fiveOutout.style.color= "yellow";
+        }
+      });
+      
     </script>
 </body>
 </html>
