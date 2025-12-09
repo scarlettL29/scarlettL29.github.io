@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+   
+  </head>
+
+  <body>
+    <section id="question1">
+      <h2>All about me quiz</h2>
+      <h5> <a href="index.html">Homepage</a> </h5>
+      <h3>What is my lucky number?</h3>
+      <label>
+        Type in your answer here:<br>
+        <input id="numberInput" type="number" placeholder="Enter your answer" />
+      </label>
+
+      <button id="btnNumber">Check</button>
+      <div class="output" id="numberOutput"></div>
+    </section>
+
+    <section id="food">
+        <h3>Which of the following colors are in the rainbow?</h3>
+       <br> <label><input type="checkbox" id="salmon">salmon</label>
+        <br> <label><input type="checkbox" id="cilantro">cilantro</label>
+       <br> <label><input type="checkbox" id="salad">salad</label>
+       <br> <label><input type="checkbox" id="carrotsoup">Carrot Soup</label>
+       <br> <label><input type="checkbox" id="rice">rice</label>
+       <br> <label><input type="checkbox" id="spaghetti">spaghetti</label>
+<br><br>
+        <button id="btnSubmit">Check</button>
+        <div class="output" id="modeOutput"></div>
+    </section>
+   
+
+    <section id="answers">
+      <br> <h1><span id="currentScore">Score: 0</span></h1>
+    </section>
+    
+
+    <script>
+      const numberInput = document.getElementById("numberInput");
+      const btnNumber = document.getElementById("btnNumber");
+      const numberOutput = document.getElementById("numberOutput");
+      let score = 0;
+      const scoreDisplay = document.getElementById("currentScore")
+
+      btnNumber.addEventListener("click", () => {
+        let sport = numberInput.value;
+        numberOutput.textContent =
+          "Wrong!"
+        console.log(numberOutput.textContent);
+        if (sport == "9") {
+          numberOutput.textContent = "Correct!";
+          score = score + 1; 
+          scoreDisplay.textContent = "Score: " + score;
+        }
+      });
+
+      btnSubmit.addEventListener("click", () => {
+
+        const rice = document.getElementById("rice").checked;
+        const spaghetti = document.getElementById("spaghetti").checked;
+        const salmon = document.getElementById("salmon").checked;
+        const cilantro = document.getElementById("cilantro").checked;
+        const carrotsoup= document.getElementById("carrotsoup").checked;
+        const salad = document.getElementById("salad").checked;
+        
+ 
+        if (rice && salmon && spaghetti && !cilantro && !carrotsoup && !salad) {
+            modeOutput.textContent = "Correct!";
+
+            if (modeOutput.dataset.scored !== 'true') {
+                score = score + 1;
+                document.getElementById("currentScore").textContent = "Score: " + score;
+                modeOutput.dataset.scored = 'true';
+            }
+        } else {
+            modeOutput.textContent = "Wrong. Check ALL the correct answers.";
+        }
+        
+    });
+      
+
+    </script>
+  </body>
+</html>
