@@ -46,16 +46,79 @@
       <button id="btnM">M</button>
     </section>
 
+    <section id="words">
+
+      <h1> _ _ _ _ _ _ _ _</h1>
+
+    </section>
+
+    <section id="answers">
+      <br> <h1><span id="currentScore">Wrong: 0</span></h1>
+    </section>
+
     <script>
+    let score = 0;
+    const secretWord = "DECEMBER"; 
+    let guessedWordDisplay = Array(secretWord.length).fill("_"); 
+    let wrongGuesses = 0;
+    const maxWrongGuesses = 7; 
 
+   
+    const scoreDisplay = document.getElementById("currentScore");
+    const wordsSection = document.querySelector("#words h1");
+    const keyboardSection = document.getElementById("hangman"); 
 
+  
+    wordsSection.textContent = guessedWordDisplay.join(" ");
 
-let Q = document.getElementById("btnQ");
-    Q.addEventListener("click", () => {
-
-      // show the blue button //
-        Q.disabled = true;
+    function checkGuess(letter) {
+        let isCorrectGuess = false;
         
-    </script>
+        for (let i = 0; i < secretWord.length; i++) {
+            if (secretWord[i] === letter) {
+                guessedWordDisplay[i] = letter;
+                isCorrectGuess = true;
+            }
+        }
+
+        wordsSection.textContent = guessedWordDisplay.join(" ");
+
+        if (!isCorrectGuess) {
+            wrongGuesses++;
+            scoreDisplay.textContent = "Wrong: " + wrongGuesses;
+
+
+            if (wrongGuesses >= maxWrongGuesses) {
+
+                alert(`Game Over! The word was: ${secretWord}`);
+                disableAllButtons();
+            }
+
+        } else if (!guessedWordDisplay.includes("_")) {
+
+            alert(`You Win! The word was: ${secretWord}`);
+            disableAllButtons();
+        }
+    }
+
+    function disableAllButtons() {
+        const allButtons = keyboardSection.querySelectorAll('button');
+        allButtons.forEach(button => {
+            button.disabled = true;
+        });
+    }
+
+
+    const letterButtons = keyboardSection.querySelectorAll('button');
+
+    letterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            button.disabled = true;
+            const guessedLetter = button.textContent.toUpperCase();
+            checkGuess(guessedLetter);
+        });
+    });
+
+</script>
 </body>
 </html>
