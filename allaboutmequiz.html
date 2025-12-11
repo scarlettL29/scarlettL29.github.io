@@ -38,15 +38,42 @@
     </section>
    
     <section id="Buttons">
-      <h3>Which of the following is true?</h3>
-      <button id="btnOne">The title at the top of this page is "Random quiz"</button>
+      <h3>Which of the following is one of my hobbies?</h3>
+      <button id="btnOne">Baking</button>
       <div class="one" id="btnUno"></div>
-      <button id="btnTwo">I am alive</button>
+      <button id="btnTwo">Running</button>
       <div class="two" id="btnDos"></div>
-      <button id="btnThree">My website is in black and white</button>
+      <button id="btnThree">Painting</button>
       <div class="three" id="btnTres"></div>
     </section>
 
+
+     <section id="name">
+    <h3>What is my name? (the creator of this website)</h3>
+     <label>
+        First name only, no capital letters
+        <br>
+        <input id="mynameInput" type="text" placeholder="Enter your answer" />
+      </label>
+
+      <button id="btnName">Check</button>
+      <div class="output" id="nameOutput"></div>
+    </section>
+
+ 
+
+    <section id="pounds">
+      <h3>Which type of music do I mostly like?</h3>
+      <br>
+      <button id="btnSteel">Rap</button>
+      <div class="steel" id="btnS"></div>
+      <br>
+      <button id="btnFeathers">Country</button>
+      <div class="feathers" id="btnF"></div>
+      <br>
+      <button id="btnBoth">Everything</button>
+      <div class="both" id="btnB"></div>
+    </section>
     <section id="answers">
       <br> <h1><span id="currentScore">Score: 0</span></h1>
     </section>
@@ -94,8 +121,45 @@
         }
         
     });
-      
 
+    btnOne.addEventListener("click", () => {
+        btnUno.textContent = "Wrong. Try again.";
+      });
+
+      btnTwo.addEventListener("click", () => {
+        btnDos.textContent = "Wrong. Try again.";
+      });
+
+      btnThree.addEventListener("click", () => {
+        score = score + 1; 
+          scoreDisplay.textContent = "Score: " + score;
+        btnTres.textContent = "Correct! You may now move on.";
+      });
+
+       btnName.addEventListener("click", () => {
+        let name = mynameInput.value;
+        nameOutput.textContent =
+          "Incorrect. My name is not " + name + ". My name is scarlett";
+        console.log(nameOutput.textContent);
+        if (name == "scarlett") {
+          nameOutput.textContent = "Correct!";
+          score = score + 1; 
+          scoreDisplay.textContent = "Score: " + score;
+        }
+      });
+         btnSteel.addEventListener("click", () => {
+        btnS.textContent = "Wrong. Try again.";
+      });
+
+      btnFeathers.addEventListener("click", () => {
+        btnF.textContent = "Wrong. Try again."
+      });
+
+      btnBoth.addEventListener("click", () => {
+        btnB.textContent = "Correct! I like everything."
+        score = score + 1; 
+          scoreDisplay.textContent = "Score: " + score;
+      });
     </script>
   </body>
 </html>
