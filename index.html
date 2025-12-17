@@ -12,7 +12,7 @@
 
 <body>
     
-   <h1> Scarlett Lippiatt's website </h1>
+   <h1> <div class="heading">Scarlett Lippiatt's website </div></h1>
     <div class="section-bubble">
     <h3>Links to other webpages</h3>
     <a href="class_links.html"> <img src="classlinks.png" alt="class links" width="100" height="100"> </a>
@@ -29,10 +29,10 @@
 
 
 
-<div id="good" class="welcome" style="display: flex;">
+<div id="good" class="welcome" >
         <div class="welcome-box">
-            <h2>Welcome to Scarlett's Site!</h2>
-            <p>Thanks for visiting. Check out my latest projects and hobbies!</p>
+            <h2>All about me:</h2>
+            <p>Thank you for visiting.</p>
             <button id="closeButton">Close</button>
         </div>
     </div>
@@ -50,37 +50,35 @@
 
     <div class="section-bubble">
     <div class="hobbies"><h2> my hobbies: </h2> </div>
-    <h3> water polo </h3>
-     I play water polo.
+    <h3> Sports: </h3>
+     I play water polo and I swim.
 
-     <h3> violin </h3> 
-     I also play the violin!
+     <h3> Instruments </h3> 
+     I also play the violin! I sometimes play the guitar for fun.
 
-     <h3> painting </h3> 
-     i like to paint 
+     <h3> Art </h3> 
+     I like to paint but I'm not very good at it.
     </div>
 
 <br>
 <br>
 
     <div class="section-bubble">
-     <h2> my favorite things: </h2> 
-     <h3> my favorite music: </h3> 
-     <p class="music"> i like rock, alt, and indie mostly but I like everything. </p>
-     <h3> favorite movies</h3> i like movies 
-     <h3>favorite food</h3> i like spaghetti, rice and salmon. 
+     <h2> My favorite things: </h2> 
+     <h3> Music: </h3> 
+     <p class="music"> I like rock, but I mostly like all kinds of music. </p>
+     <h3> Favorite movies</h3> I like action, comedy, and horror movies 
+     <h3>favorite foods</h3> I like spaghetti, rice and salmon. 
     </div>
 
     <br>
     <br>
 
     <div class="section-bubble">
-     <h2>my random thoughts:</h2> 
-     <p>nine is my lucky number. </p>
-     <p>i'm eating almonds right now. anya's hand sanitizer smells good. </p>
-   <br> <strong>bold test. </strong>
-     that's so cool .
-     <br> <em>i love sushi </em>
+     <h2>Fun facts:</h2> 
+     <p><strong>Nine </strong>is my lucky number. </p>
+     <p>I like cooking pasta.</p>
+     <br> I love <em>sushi</em>.
      </div>
      <br> <br>
       
@@ -125,18 +123,18 @@
 
 
 <script>
-        const modal = document.getElementById('good');
-        const closeButton = document.getElementById('closeButton');
+        const good = document.getElementById("good");
+        const closeButton = document.getElementById("closeButton");
 
-        function hideModal() {
-            modal.style.display = 'none'; 
+        function hide() {
+            good.style.display = "none"; 
         }
 
-        closeButton.addEventListener('click', hideModal);
+        closeButton.addEventListener("click", hide);
 
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                hideModal();
+        good.addEventListener("click", function(e) {
+            if (e.target === good) {
+                hide();
             }
         });
     </script>

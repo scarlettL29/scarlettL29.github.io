@@ -12,7 +12,7 @@ h2 {
 }
 
 h3 {
-    border: 2px dashed paleturquoise;
+    text-decoration: underline
 }
 h1{
    padding-left: 20px 10px;
@@ -29,7 +29,6 @@ body {
 h1 {
     color: var(--secondary);
     text-decoration: underline;
-    text-align: center;
 }
 h2 {
     text-emphasis: triangle;
@@ -122,18 +121,11 @@ a {
 
 
 
-
-
-
-/* --- New Simple Classes --- */
-
-/* Replaces .title */
 .hi {
-    /* Keeping text-align for centering, and the h1 will handle the rest */
-    text-align: center; 
+  text-align: center; 
 }
 
-/* Replaces .section-bubble (for hobbies, thoughts, projects) */
+
 .hello {
     background-color: #3c0a41;
     padding: 20px;
@@ -146,10 +138,10 @@ a {
 .hello h2 {
     margin-top: 0;
     padding-bottom: 10px;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid #f4f1f1;
 }
 
-/* Replaces .modal-overlay */
+
 .welcome {
     position: fixed; 
     top: 0;
@@ -164,7 +156,6 @@ a {
     align-items: center;
 }
 
-/* Replaces .modal-content */
 .welcome-box {
     background-color: white;
     color: #333;
@@ -172,7 +163,6 @@ a {
     border-radius: 8px;
     max-width: 400px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     border: 3px solid var(--primary); 
 }
 
@@ -189,15 +179,19 @@ a {
 }
 
 .welcome-box button:hover {
-    background-color: #008080;
+    background-color: #58145c;
 }
 
-/* --- Your Existing Styles (Keep these as they are) --- */
 
 :root {
     --text: #ebfaea;
     --background: #320836;
-    /* ... and the rest of your variables ... */
+
 }
 
-/* ... all of your existing H1, H2, H3, img, ul, ol, etc. styles ... */
+
+
+
+.heading {
+   text-align: center;
+}
