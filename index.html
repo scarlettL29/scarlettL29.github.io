@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <h1>Scarlett </h1> 
+    
+   <h1> Scarlett Lippiatt's website </h1>
+    <div class="section-bubble">
     <h3>Links to other webpages</h3>
     <a href="class_links.html"> <img src="classlinks.png" alt="class links" width="100" height="100"> </a>
      <a href="input_elements_challenge.html"> <img src="iec.png" alt="input elements challenge" width="100" height="100"></a>
@@ -21,7 +23,30 @@
     <a href="wordgame.html"><img src="word1.png" alt="word game #1" width="100" height="100"></a>
    <a href="wordgame2.html"><img src="word2.png" alt="word game #2" width="100" height="100"></a>
     <a href="wordgame3.html"><img src="word3.png" alt="word game #3" width="100" height="100"></a>
+    </div>
 <br>
+
+
+
+
+<div id="good" class="welcome" style="display: flex;">
+        <div class="welcome-box">
+            <h2>Welcome to Scarlett's Site!</h2>
+            <p>Thanks for visiting. Check out my latest projects and hobbies!</p>
+            <button id="closeButton">Close</button>
+        </div>
+    </div>
+
+
+
+
+    <div class="hi"><h1>Scarlett Lippiatt's website </h1> </div>
+
+
+
+
+
+
 
     <div class="section-bubble">
     <div class="hobbies"><h2> my hobbies: </h2> </div>
@@ -95,5 +120,30 @@
         <li><p> <audio controls src="funsong1.wav"> </p></li>
         <li><p> <audio controls src="song2.wav"> </p></li>
             </ol>
+
+
+
+
+<script>
+        const modal = document.getElementById('good');
+        const closeButton = document.getElementById('closeButton');
+
+        function hideModal() {
+            modal.style.display = 'none'; 
+        }
+
+        closeButton.addEventListener('click', hideModal);
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                hideModal();
+            }
+        });
+    </script>
+
+
+
+
+
         </html>
 

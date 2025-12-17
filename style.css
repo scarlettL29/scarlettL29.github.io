@@ -29,7 +29,7 @@ body {
 h1 {
     color: var(--secondary);
     text-decoration: underline;
-
+    text-align: center;
 }
 h2 {
     text-emphasis: triangle;
@@ -112,3 +112,92 @@ a {
     padding-bottom: 10px;
     border-bottom: 2px solid #eee;
 };
+.title {
+   
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
+
+/* --- New Simple Classes --- */
+
+/* Replaces .title */
+.hi {
+    /* Keeping text-align for centering, and the h1 will handle the rest */
+    text-align: center; 
+}
+
+/* Replaces .section-bubble (for hobbies, thoughts, projects) */
+.hello {
+    background-color: #3c0a41;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} 
+
+.hello h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+/* Replaces .modal-overlay */
+.welcome {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Replaces .modal-content */
+.welcome-box {
+    background-color: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: 3px solid var(--primary); 
+}
+
+.welcome-box button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.welcome-box button:hover {
+    background-color: #008080;
+}
+
+/* --- Your Existing Styles (Keep these as they are) --- */
+
+:root {
+    --text: #ebfaea;
+    --background: #320836;
+    /* ... and the rest of your variables ... */
+}
+
+/* ... all of your existing H1, H2, H3, img, ul, ol, etc. styles ... */
