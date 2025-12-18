@@ -157,8 +157,8 @@ a {
 }
 
 .welcome-box {
-    background-color: rgb(69, 21, 69);
-    color: #ffffff;
+    background-color: var(--text);
+    color: var(--background);
     padding: 30px;
     border-radius: 8px;
     width: 500px; 
@@ -195,4 +195,12 @@ a {
 
 .heading {
    text-align: center;
+}
+
+.book {
+    color: var(--background);
+}
+
+.links {
+    text-align: center;
 }
