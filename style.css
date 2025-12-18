@@ -66,10 +66,9 @@ ul {
 
 ol {
     color: var(--text);
-    font-style: oblique;
-    border: 2px dashed rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
     margin: auto;
-    background: rgb(41, 3, 43);
+    background: rgb(81, 33, 85);
 }
 
 p.music {
@@ -242,9 +241,9 @@ img:hover {
     border-radius: 10px;
 }
 .y {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .yo {
-    font-size: 1.2em;
+    font-size: 1em;
 }
