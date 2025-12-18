@@ -9,9 +9,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <p><a href="index.html">Home page</a></p>
-        <p id="balloon">🎈</p>
+  <a href = "index.html"> Home page</a>
+<p id="balloon">🎈</p>
 
 <script>
   let balloonEl = document.getElementById("balloon");
@@ -19,11 +20,10 @@
   balloonEl.style.fontSize = fontSize + "px";
   function handleKeyDown(event) {
     if (event.key == "ArrowUp") {
-     fontSize *= 1.1;
-     balloonEl.style.fontSize = fontSize + "px";
+      fontSize *= 1.1;
+      balloonEl.style.fontSize = fontSize + "px";
       event.preventDefault();
     }
-}     function handleKeyDown(event) {
     if (event.key == "ArrowDown") {
       fontSize /=1.1;
       balloonEl.style.fontSize = fontSize + "px";
@@ -32,6 +32,5 @@
   }
   window.addEventListener("keydown", handleKeyDown);
 </script> 
-
 </body>
 </html>
