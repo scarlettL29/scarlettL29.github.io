@@ -83,7 +83,7 @@ a {
 }
 
 .section-bubble {
-    background-color: #3c0a41;
+    background-color: #5e1e65;
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 15px;
@@ -98,7 +98,7 @@ a {
 };
 
 .section-fav {
-    background-color: #531258;
+    background-color: #4f1c52;
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 15px;
@@ -157,13 +157,14 @@ a {
 }
 
 .welcome-box {
-    background-color: white;
-    color: #333;
+    background-color: rgb(69, 21, 69);
+    color: #ffffff;
     padding: 30px;
     border-radius: 8px;
-    max-width: 400px;
+    width: 500px; 
     text-align: center;
-    border: 3px solid var(--primary); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+    border: 3px solid var(--primary);
 }
 
 .welcome-box button {
@@ -179,7 +180,7 @@ a {
 }
 
 .welcome-box button:hover {
-    background-color: #58145c;
+    background-color: #14455c;
 }
 
 
