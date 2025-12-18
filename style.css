@@ -205,6 +205,11 @@ a {
 
 .me {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.67em;
     color: var(--primary)
+}
+
+
+.eee {
+    text-align: center;
 }
