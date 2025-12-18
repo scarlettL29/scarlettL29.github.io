@@ -119,8 +119,6 @@ a {
 
 
 
-
-
 .hi {
   text-align: center; 
 }
@@ -203,4 +201,10 @@ a {
 
 .links {
     text-align: center;
+}
+
+.me {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary)
 }
