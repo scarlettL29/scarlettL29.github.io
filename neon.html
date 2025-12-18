@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neon Breakout Deluxe</title>
+    <style>
+        body { background: #0a0a0a; color: #0ff; font-family: 'Courier New', Courier, monospace; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; overflow: hidden; }
+        canvas { border: 2px solid #0ff; box-shadow: 0 0 15px #0ff; background: #000; cursor: none; }
+        .ui { margin-bottom: 10px; width: 480px; display: flex; justify-content: space-between; font-size: 1.2rem; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <div class="ui">
+        <span>Score: <id id="score">0</id></span>
+        <span>Lives: <id id="lives">3</id></span>
+    </div>
+    <canvas id="gameCanvas" width="480" height="320"></canvas>
+
+<script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+    const scoreDisplay = document.getElementById("score");
+    const livesDisplay = document.getElementById("lives");
+
+    // Game Variables
+    let score = 0;
+    let lives = 3;
+    let gameRunning = true;
+
+    // Ball Class
+    class Ball {
+        constructor() {
+            this.radius = 8;
+            this.reset();
+        }
+        reset() {
+            this.x = canvas.width / 2;
+            this.y = canvas.height - 30;
+            this.dx = 3;
+            this.dy = -3;
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = "#fff";
+            ctx.shadowBlur =
